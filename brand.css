@@ -1,0 +1,43 @@
+/* ==========================================================================
+   Lilaleo Brand Tokens
+   Wedding & event equipment hire — mirrors, display stands, lawn games,
+   and fully bespoke customised pieces for weddings, kitchen teas and
+   bachelorette celebrations.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Nunito:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Core palette */
+  --brand-sage: #94A187;
+  --brand-sage-dark: #737F68;
+  --brand-blush: #F3D7DB;
+  --brand-blush-dark: #E7B7C0;
+  --brand-blue: #C9D6E3;
+  --brand-blue-dark: #A9BFD6;
+  --brand-gold: #C9A66B;
+  --brand-gold-light: #E4D2AC;
+  --brand-white: #FFFFFF;
+
+  /* Neutrals */
+  --brand-cream: #FBF7F2;
+  --brand-beige: #EFE6D9;
+  --brand-taupe: #B9AA98;
+  --brand-brown-light: #A9876A;
+  --brand-text: #4B463F;
+  --brand-text-soft: #6C6559;
+
+  /* Radii */
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --radius-pill: 999px;
+
+  /* Shadows */
+  --shadow-card: 0 8px 24px rgba(75, 70, 63, 0.08);
+  --shadow-card-hover: 0 14px 32px rgba(75, 70, 63, 0.12);
+
+  /* Fonts */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Nunito', sans-serif;
+}

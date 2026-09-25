@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Lilaleo — Wedding &amp; Event Hire</title>
+<meta name="description" content="Get in touch with Lilaleo to book mirrors, display stands, lawn games and bespoke pieces for your wedding, kitchen tea or bachelorette.">
+<link rel="stylesheet" href="brand.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner shell">
+    <a href="index.html" aria-label="Lilaleo home">
+      <img class="brand-logo" src="assets/lilaleo-logo.svg" alt="Lilaleo — wedding and event hire">
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="shop/index.html">Shop</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+      <a class="nav-cart" href="shop/booking.html" aria-label="View booking list">
+        Booking list <span class="nav-cart__badge" data-cart-count>0</span>
+      </a>
+    </nav>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="section section--blush">
+    <div class="shell intro center reveal">
+      <span class="eyebrow">Contact</span>
+      <h1>Let's talk about your celebration</h1>
+      <p>Reach out about a wedding, kitchen tea or bachelorette, and we'll help you plan the perfect hire list.</p>
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="shell" style="display:grid; gap:2.5rem; grid-template-columns: 1fr; align-items:start;">
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(220px,1fr));">
+        <div class="card reveal">
+          <h3>Phone</h3>
+          <p><a href="tel:+27743617756">+27 74 361 7756</a></p>
+        </div>
+        <div class="card reveal">
+          <h3>WhatsApp</h3>
+          <p><a href="https://wa.me/27743617756?text=Hi%20Lilaleo%2C%20I%27d%20love%20to%20find%20out%20more%20about%20hiring%20items%20for%20my%20event." target="_blank" rel="noopener noreferrer">Message us on WhatsApp</a></p>
+        </div>
+        <div class="card reveal">
+          <h3>Email</h3>
+          <p><a href="mailto:info@lilaleo.co.za">info@lilaleo.co.za</a></p>
+        </div>
+      </div>
+
+      <form class="card reveal" action="https://submit-form.com/YOUR_FORMSPARK_ID" method="POST" style="max-width:640px;">
+        <input type="hidden" name="_redirect" value="thank-you.html">
+        <h2>Send an enquiry</h2>
+        <div class="form-field">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" autocomplete="name" required>
+        </div>
+        <div class="form-field">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+        </div>
+        <div class="form-field">
+          <label for="phone">Phone number</label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel">
+        </div>
+        <div class="form-field">
+          <label for="event-type">Event type</label>
+          <select id="event-type" name="event_type" required>
+            <option value="">Select an event type</option>
+            <option value="Wedding">Wedding</option>
+            <option value="Kitchen tea">Kitchen tea</option>
+            <option value="Bachelorette">Bachelorette</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="event-date">Event date</label>
+          <input type="date" id="event-date" name="event_date">
+        </div>
+        <div class="form-field">
+          <label for="message">Tell us about your event</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <span class="hint">Include any bespoke or customisation ideas you have in mind.</span>
+        </div>
+        <button class="btn btn--primary" type="submit">Send enquiry</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-grid">
+      <div>
+        <h3>Lilaleo</h3>
+        <p>Gentle, beautiful hire pieces for weddings, kitchen teas and bachelorette celebrations.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="shop/index.html">Shop the catalogue</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About Lilaleo</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="privacy.html">Privacy policy</a></li>
+          <li><a href="terms.html">Terms of use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Lilaleo. All rights reserved.</span>
+      <a class="credit-btn" href="https://stratstudios.co.za" target="_blank" rel="noopener noreferrer">Designed by StratStudios</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

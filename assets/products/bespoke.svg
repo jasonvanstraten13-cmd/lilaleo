@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t">
+  <title id="t">Bespoke personalised sign with soft floral accents</title>
+  <rect width="400" height="400" fill="#FBF7F2"/>
+  <rect x="80" y="140" width="240" height="130" rx="18" fill="#FFFFFF" stroke="#C9A66B" stroke-width="4"/>
+  <text x="200" y="215" font-family="'Playfair Display', serif" font-size="30" fill="#4B463F" text-anchor="middle">A &amp; B</text>
+  <path d="M100 140 Q120 110 150 130 Q160 105 190 120" stroke="#94A187" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <circle cx="300" cy="150" r="9" fill="#F3D7DB"/>
+  <circle cx="120" cy="280" r="7" fill="#C9D6E3"/>
+</svg>

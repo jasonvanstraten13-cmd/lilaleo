@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 96" width="260" height="96" role="img" aria-labelledby="lilaleoLogoTitle">
+  <title id="lilaleoLogoTitle">Lilaleo — wedding and event hire</title>
+  <circle cx="48" cy="48" r="40" fill="#FBF7F2" stroke="#C9A66B" stroke-width="1.5"/>
+  <path d="M30 66 C34 40, 30 24, 44 20 C40 34, 42 52, 52 66 Z" fill="#94A187"/>
+  <path d="M66 66 C62 40, 66 24, 52 20 C56 34, 54 52, 44 66 Z" fill="#F3D7DB"/>
+  <circle cx="48" cy="24" r="4.5" fill="#C9A66B"/>
+  <text x="100" y="46" font-family="'Playfair Display', serif" font-size="34" font-weight="600" fill="#4B463F">Lilaleo</text>
+  <text x="101" y="70" font-family="'Nunito', sans-serif" font-size="13" letter-spacing="2" fill="#94A187">WEDDING &amp; EVENT HIRE</text>
+</svg>

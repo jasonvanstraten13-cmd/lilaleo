@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Booking List — Lilaleo Wedding &amp; Event Hire</title>
+<meta name="description" content="Review your Lilaleo booking list, tell us your event date, and send us your enquiry.">
+<link rel="stylesheet" href="../brand.css">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="shop.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner shell">
+    <a href="../index.html" aria-label="Lilaleo home">
+      <img class="brand-logo" src="../assets/lilaleo-logo.svg" alt="Lilaleo — wedding and event hire">
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="../index.html">Home</a>
+      <a href="index.html">Shop</a>
+      <a href="../gallery.html">Gallery</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a class="nav-cart" href="booking.html" aria-label="View booking list" aria-current="page">
+        Booking list <span class="nav-cart__badge" data-cart-count>0</span>
+      </a>
+    </nav>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="section section--blush">
+    <div class="shell intro center reveal">
+      <span class="eyebrow">Your booking list</span>
+      <h1>Review your items and send your enquiry</h1>
+      <p>Adjust quantities below, then tell us your event date so we can confirm availability.</p>
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="shell" style="display:grid; gap:2rem; grid-template-columns:1fr;">
+      <output class="status-message" aria-live="polite" data-status></output>
+
+      <div>
+        <div data-booking-list></div>
+        <div class="empty-state" data-booking-empty hidden>
+          <h2>Your booking list is empty</h2>
+          <p>Browse the catalogue and add pieces you love to get started.</p>
+          <a class="btn btn--primary" href="index.html">Browse the catalogue</a>
+        </div>
+        <button class="btn btn--outline btn--sm" type="button" data-clear-booking>Clear booking list</button>
+      </div>
+
+      <div class="booking-summary">
+        <div class="booking-summary__row"><span>Items</span><span data-summary-count>0</span></div>
+        <div class="booking-summary__row"><span>Subtotal</span><span data-summary-subtotal>R0.00</span></div>
+      </div>
+
+      <form class="card" data-booking-form action="https://submit-form.com/YOUR_FORMSPARK_ID" method="POST" hidden>
+        <input type="hidden" name="_redirect" value="../thank-you.html">
+        <input type="hidden" name="order_summary" value="">
+        <h2>Send your booking enquiry</h2>
+        <div class="form-field">
+          <label for="b-name">Full name</label>
+          <input type="text" id="b-name" name="name" autocomplete="name" required>
+        </div>
+        <div class="form-field">
+          <label for="b-email">Email address</label>
+          <input type="email" id="b-email" name="email" autocomplete="email" required>
+        </div>
+        <div class="form-field">
+          <label for="b-phone">Phone number</label>
+          <input type="tel" id="b-phone" name="phone" autocomplete="tel">
+        </div>
+        <div class="form-field">
+          <label for="b-event-type">Event type</label>
+          <select id="b-event-type" name="event_type" required>
+            <option value="">Select an event type</option>
+            <option value="Wedding">Wedding</option>
+            <option value="Kitchen tea">Kitchen tea</option>
+            <option value="Bachelorette">Bachelorette</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="b-event-date">Event date</label>
+          <input type="date" id="b-event-date" name="event_date" required>
+        </div>
+        <div class="form-field">
+          <label for="b-notes">Customisation notes</label>
+          <textarea id="b-notes" name="notes" rows="4"></textarea>
+          <span class="hint">Let us know any names, dates, colours or styling requests for bespoke items.</span>
+        </div>
+        <button class="btn btn--primary" type="submit">Send booking enquiry</button>
+        <p class="hint">This is an enquiry, not a live payment. We'll confirm availability, pricing and payment with you personally.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-grid">
+      <div>
+        <h3>Lilaleo</h3>
+        <p>Gentle, beautiful hire pieces for weddings, kitchen teas and bachelorette celebrations.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="index.html">Shop the catalogue</a></li>
+          <li><a href="../gallery.html">Gallery</a></li>
+          <li><a href="../about.html">About Lilaleo</a></li>
+          <li><a href="../contact.html">Contact us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="../privacy.html">Privacy policy</a></li>
+          <li><a href="../terms.html">Terms of use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Lilaleo. All rights reserved.</span>
+      <a class="credit-btn" href="https://stratstudios.co.za" target="_blank" rel="noopener noreferrer">Designed by StratStudios</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+<script src="shop.js"></script>
+</body>
+</html>

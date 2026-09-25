@@ -1,0 +1,143 @@
+/* ==========================================================================
+   Lilaleo — shop specific styles
+   ========================================================================== */
+
+.shop-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  align-items: end;
+  background: #fff;
+  border: 1px solid var(--brand-beige);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-card);
+}
+.shop-toolbar .form-field { margin-bottom: 0; flex: 1 1 200px; }
+
+.product-card__price { font-weight: 800; color: var(--brand-sage-dark); margin: 0.35rem 0; }
+.product-card__meta { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; margin-top: 0.75rem; }
+
+.badge-out {
+  display: inline-block;
+  background: var(--brand-taupe);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  border-radius: var(--radius-pill);
+  padding: 0.2rem 0.6rem;
+}
+.badge-custom {
+  display: inline-block;
+  background: var(--brand-gold-light);
+  color: var(--brand-text);
+  font-size: 0.72rem;
+  font-weight: 700;
+  border-radius: var(--radius-pill);
+  padding: 0.2rem 0.6rem;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #fff;
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--brand-taupe);
+}
+
+/* ---------- Product detail ---------- */
+.product-detail {
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 860px) {
+  .product-detail { grid-template-columns: 1fr 1fr; align-items: start; }
+}
+.product-detail__figure {
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: #fff;
+  box-shadow: var(--shadow-card);
+}
+.product-detail__figure img { width: 100%; height: 100%; object-fit: cover; }
+
+.qty-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid var(--brand-beige);
+  border-radius: var(--radius-pill);
+  padding: 0.3rem;
+  background: #fff;
+}
+.qty-control button {
+  width: 2.2rem; height: 2.2rem;
+  border-radius: 50%;
+  border: none;
+  background: var(--brand-cream);
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+.qty-control button:focus-visible { outline: 3px solid var(--brand-gold); }
+.qty-control input {
+  width: 3rem;
+  text-align: center;
+  border: none;
+  font-weight: 700;
+  font-size: 1rem;
+  background: transparent;
+}
+
+/* ---------- Booking list ---------- */
+.booking-item {
+  display: grid;
+  grid-template-columns: 72px 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--brand-beige);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.booking-item__figure {
+  width: 72px; height: 72px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--brand-cream);
+}
+.booking-item__figure img { width: 100%; height: 100%; object-fit: cover; }
+.booking-item__controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.booking-item__remove {
+  background: none;
+  border: none;
+  color: #A3423A;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.booking-summary {
+  background: #fff;
+  border: 1px solid var(--brand-beige);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-card);
+}
+.booking-summary__row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+  border-bottom: 1px dashed var(--brand-beige);
+}
+.booking-summary__row:last-of-type { border-bottom: none; font-weight: 800; font-size: 1.1rem; }
