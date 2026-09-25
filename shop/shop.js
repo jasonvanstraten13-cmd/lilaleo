@@ -38,6 +38,48 @@
     });
   }
 
+  function setMetaTag(selector, attr, content) {
+    var el = document.querySelector(selector);
+    if (!el) { return; }
+    el.setAttribute(attr, content);
+  }
+
+  function updateProductSeo(product) {
+    var url = 'https://www.lilahleo.co.za/shop/product.html?slug=' + product.slug;
+    var description = product.description + ' Dimensions: ' + product.dimensions + '.';
+    var image = 'https://www.lilahleo.co.za/' + product.image.replace('../', '');
+
+    document.title = product.name + ' — Lilahleo Hire';
+    setMetaTag('meta[name="description"]', 'content', description);
+    setMetaTag('link[rel="canonical"]', 'href', url);
+    setMetaTag('meta[property="og:title"]', 'content', product.name + ' — Lilahleo Hire');
+    setMetaTag('meta[property="og:description"]', 'content', description);
+    setMetaTag('meta[property="og:url"]', 'content', url);
+    setMetaTag('meta[property="og:image"]', 'content', image);
+    setMetaTag('meta[name="twitter:title"]', 'content', product.name + ' — Lilahleo Hire');
+    setMetaTag('meta[name="twitter:description"]', 'content', description);
+    setMetaTag('meta[name="twitter:image"]', 'content', image);
+
+    var script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      name: product.name,
+      description: product.description,
+      category: product.category,
+      image: image,
+      offers: {
+        '@type': 'Offer',
+        priceCurrency: product.currency,
+        price: (product.price / 100).toFixed(2),
+        availability: product.inStock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
+        url: url
+      }
+    });
+    document.head.appendChild(script);
+  }
+
   function addToCart(product, qty) {
     var cart = getCart();
     var existing = cart.find(function (item) { return item.id === product.id; });
@@ -143,6 +185,7 @@
       }
 
       document.title = product.name + ' — Lilahleo Hire';
+      updateProductSeo(product);
 
       detailRoot.innerHTML =
         '<div class="product-detail__figure"><img src="' + product.image + '" alt="' + product.name + '" width="600" height="600"></div>' +
