@@ -1,4 +1,4 @@
-// Lilaleo — shared site behaviour (nav, header shrink, reveal animation)
+// Lilahleo — shared site behaviour (nav, header shrink, reveal animation)
 (function () {
   'use strict';
 
@@ -36,7 +36,7 @@
   }
 
   // Keep the header booking-list badge in sync on every page.
-  var CART_KEY = 'lilaleo_booking_cart_v1';
+  var CART_KEY = 'lilahleo_booking_cart_v1';
   var badge = document.querySelector('[data-cart-count]');
   if (badge) {
     var raw = window.localStorage.getItem(CART_KEY);

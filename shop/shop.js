@@ -1,8 +1,8 @@
-// Lilaleo — shop catalogue, product detail and booking list behaviour
+// Lilahleo — shop catalogue, product detail and booking list behaviour
 (function () {
   'use strict';
 
-  var CART_KEY = 'lilaleo_booking_cart_v1';
+  var CART_KEY = 'lilahleo_booking_cart_v1';
   var PRODUCTS_URL = 'data/products.json';
 
   function formatPrice(cents) {
@@ -142,7 +142,7 @@
         return;
       }
 
-      document.title = product.name + ' — Lilaleo Hire';
+      document.title = product.name + ' — Lilahleo Hire';
 
       detailRoot.innerHTML =
         '<div class="product-detail__figure"><img src="' + product.image + '" alt="' + product.name + '" width="600" height="600"></div>' +
