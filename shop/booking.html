@@ -61,9 +61,8 @@
         <div class="booking-summary__row"><span>Subtotal</span><span data-summary-subtotal>R0.00</span></div>
       </div>
 
-      <form class="card" data-booking-form action="https://submit-form.com/YOUR_FORMSPARK_ID" method="POST" hidden>
-        <input type="hidden" name="_redirect" value="../thank-you.html">
-        <input type="hidden" name="order_summary" value="">
+      <form class="card" data-booking-form novalidate hidden>
+        <div class="hp-field" aria-hidden="true"><label for="hp-company">Company</label><input type="text" id="hp-company" name="company" tabindex="-1" autocomplete="off"></div>
         <h2>Send your booking enquiry</h2>
         <div class="form-field">
           <label for="b-name">Full name</label>
@@ -75,7 +74,7 @@
         </div>
         <div class="form-field">
           <label for="b-phone">Phone number</label>
-          <input type="tel" id="b-phone" name="phone" autocomplete="tel">
+          <input type="tel" id="b-phone" name="phone" autocomplete="tel" required>
         </div>
         <div class="form-field">
           <label for="b-event-type">Event type</label>
@@ -93,6 +92,10 @@
           <input type="date" id="b-event-date" name="event_date" required>
         </div>
         <div class="form-field">
+          <label for="b-venue">Venue or area</label>
+          <input type="text" id="b-venue" name="venue" maxlength="200" placeholder="e.g. Oak Tree Estate, Stellenbosch">
+        </div>
+        <div class="form-field">
           <label for="b-decor-interest"><input type="checkbox" id="b-decor-interest" name="decor_interest" value="Yes"> I'm also interested in full decor &amp; styling</label>
         </div>
         <div class="form-field">
@@ -101,7 +104,8 @@
           <span class="hint">Let us know any names, dates, colours or styling requests for bespoke items.</span>
         </div>
         <button class="btn btn--primary" type="submit">Send booking enquiry</button>
-        <p class="hint">This is an enquiry, not a live payment. We'll confirm availability, pricing and payment with you personally.</p>
+        <p class="form-error" role="alert" data-form-error hidden></p>
+        <p class="hint">No payment is taken now. We'll confirm availability for your date, then email you a secure link to pay a deposit and secure your booking.</p>
       </form>
     </div>
   </section>

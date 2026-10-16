@@ -402,3 +402,8 @@ p { margin: 0 0 1em; color: var(--brand-text-soft); }
   font-weight: 700;
   color: var(--brand-sage-dark);
 }
+
+/* Form errors and spam honeypot */
+.form-error { color: #A3423A; font-weight: 700; }
+.form-field [aria-invalid="true"] { border-color: #A3423A; }
+.hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }

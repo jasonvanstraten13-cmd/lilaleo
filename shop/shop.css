@@ -141,3 +141,8 @@
   border-bottom: 1px dashed var(--brand-beige);
 }
 .booking-summary__row:last-of-type { border-bottom: none; font-weight: 800; font-size: 1.1rem; }
+
+/* Deposit payment page */
+.pay-shell { max-width: 640px; display: grid; gap: 1.25rem; }
+.pay-shell h2 { margin-top: 0; }
+.pay-note { white-space: pre-wrap; padding: 0.75rem 1rem; background: var(--brand-cream); border-radius: var(--radius-sm); }

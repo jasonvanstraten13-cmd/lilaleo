@@ -1,0 +1,5 @@
+{
+  "depositPercent": 50,
+  "minNoticeDays": 3,
+  "maxQuantityPerItem": 20
+}

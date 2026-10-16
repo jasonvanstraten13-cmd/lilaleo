@@ -1,0 +1,17 @@
+{
+  "name": "lilahleo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/dev-server.mjs",
+    "dev": "netlify dev",
+    "test": "node --test",
+    "register-webhook": "node scripts/register-yoco-webhook.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^8.2.0"
+  }
+}

@@ -1,4 +1,6 @@
 User-agent: *
+Disallow: /admin/
+Disallow: /shop/pay.html
 Allow: /
 
 Sitemap: https://www.lilahleo.co.za/sitemap.xml

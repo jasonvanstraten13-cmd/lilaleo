@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bookings admin — Lilahleo</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="../assets/lilahleo-logo.svg">
+<link rel="stylesheet" href="../brand.css">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner shell">
+    <a href="../index.html" aria-label="Lilahleo home">
+      <img class="brand-logo" src="../assets/lilahleo-logo.svg" alt="Lilahleo — wedding and event hire">
+    </a>
+    <button class="btn btn--outline btn--sm" type="button" data-logout hidden>Log out</button>
+  </div>
+</header>
+
+<main class="section section--white">
+  <div class="shell">
+    <h1>Bookings</h1>
+
+    <form class="card admin-login" data-login>
+      <div class="form-field">
+        <label for="admin-password">Admin password</label>
+        <input type="password" id="admin-password" autocomplete="current-password" required>
+      </div>
+      <button class="btn btn--primary" type="submit">Log in</button>
+      <p class="form-error" role="alert" data-login-error hidden></p>
+    </form>
+
+    <div data-dashboard hidden>
+      <div class="admin-tabs" role="tablist">
+        <button type="button" class="admin-tab is-active" data-filter="action">Needs action</button>
+        <button type="button" class="admin-tab" data-filter="approved">Awaiting deposit</button>
+        <button type="button" class="admin-tab" data-filter="deposit_paid">Secured</button>
+        <button type="button" class="admin-tab" data-filter="all">All</button>
+        <button type="button" class="btn btn--outline btn--sm" data-refresh>Refresh</button>
+      </div>
+      <output class="status-message" aria-live="polite" data-admin-status></output>
+      <div class="admin-list" data-bookings></div>
+    </div>
+  </div>
+</main>
+
+<script src="admin.js"></script>
+</body>
+</html>

@@ -45,6 +45,67 @@
     badge.textContent = String(count);
   }
 
+  // Shared form submission: checks required fields, posts JSON to a site function, shows errors inline.
+  window.LilahleoForms = {
+    submit: function (form, url, payload, onSuccess) {
+      var errorBox = form.querySelector('[data-form-error]');
+      var button = form.querySelector('button[type="submit"]');
+      function showError(message) {
+        errorBox.textContent = message;
+        errorBox.hidden = !message;
+      }
+      var firstInvalid = null;
+      form.querySelectorAll('[required]').forEach(function (field) {
+        var value = field.value.trim();
+        var ok = value !== '' && (field.type !== 'email' || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value));
+        field.setAttribute('aria-invalid', String(!ok));
+        if (!ok && !firstInvalid) { firstInvalid = field; }
+      });
+      if (firstInvalid) {
+        showError('Please check the highlighted fields.');
+        firstInvalid.focus();
+        return;
+      }
+      showError('');
+      var label = button.textContent;
+      button.disabled = true;
+      button.textContent = 'Sending...';
+      fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
+        .then(function (response) {
+          return response.json().catch(function () { return {}; }).then(function (body) {
+            if (!response.ok) { throw new Error(body.error || 'Something went wrong. Please try again.'); }
+            return body;
+          });
+        })
+        .then(onSuccess)
+        .catch(function (error) {
+          showError(error.message);
+          button.disabled = false;
+          button.textContent = label;
+        });
+    }
+  };
+
+  var contactForm = document.querySelector('[data-contact-form]');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      var fields = contactForm.elements;
+      window.LilahleoForms.submit(contactForm, '/api/contact', {
+        name: fields.name.value,
+        email: fields.email.value,
+        phone: fields.phone.value,
+        eventType: fields.event_type.value,
+        eventDate: fields.event_date.value,
+        decorInterest: fields.decor_interest.checked,
+        message: fields.message.value,
+        company: fields.company.value
+      }, function () {
+        window.location.href = 'thank-you.html';
+      });
+    });
+  }
+
   var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var reveals = document.querySelectorAll('.reveal');
   if (reveals.length) {

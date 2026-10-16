@@ -317,15 +317,25 @@
     }
 
     if (bookingForm) {
-      bookingForm.addEventListener('submit', function () {
-        var cart = getCart();
-        var summaryField = bookingForm.querySelector('[name="order_summary"]');
-        if (summaryField) {
-          var lines = cart.map(function (item) {
-            return item.name + ' x ' + item.qty + ' (' + formatPrice(item.price * item.qty) + ')';
-          });
-          summaryField.value = lines.join('\n');
-        }
+      bookingForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        var fields = bookingForm.elements;
+        var payload = {
+          items: getCart().map(function (item) { return { id: item.id, quantity: item.qty }; }),
+          name: fields.name.value,
+          email: fields.email.value,
+          phone: fields.phone.value,
+          eventType: fields.event_type.value,
+          eventDate: fields.event_date.value,
+          venue: fields.venue.value,
+          decorInterest: fields.decor_interest.checked,
+          notes: fields.notes.value,
+          company: fields.company.value
+        };
+        window.LilahleoForms.submit(bookingForm, '/api/booking-enquiry', payload, function (result) {
+          saveCart([]);
+          window.location.href = '../thank-you.html?type=booking&ref=' + encodeURIComponent(result.ref);
+        });
       });
     }
 

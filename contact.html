@@ -67,8 +67,8 @@
         </div>
       </div>
 
-      <form class="card reveal" action="https://submit-form.com/YOUR_FORMSPARK_ID" method="POST" style="max-width:640px;">
-        <input type="hidden" name="_redirect" value="thank-you.html">
+      <form class="card reveal" data-contact-form novalidate style="max-width:640px;">
+        <div class="hp-field" aria-hidden="true"><label for="hp-company">Company</label><input type="text" id="hp-company" name="company" tabindex="-1" autocomplete="off"></div>
         <h2>Send an enquiry</h2>
         <div class="form-field">
           <label for="name">Full name</label>
@@ -106,6 +106,7 @@
           <span class="hint">Include any bespoke, customisation or decor styling ideas you have in mind.</span>
         </div>
         <button class="btn btn--primary" type="submit">Send enquiry</button>
+        <p class="form-error" role="alert" data-form-error hidden></p>
       </form>
     </div>
   </section>

@@ -1,0 +1,20 @@
+.site-header__inner { display: flex; align-items: center; justify-content: space-between; }
+.admin-login { max-width: 420px; text-align: left; }
+.admin-login:hover, .admin-booking:hover { transform: none; }
+.admin-tabs { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin: 1rem 0 1.5rem; }
+.admin-tab { padding: 0.5rem 1rem; border: 2px solid var(--brand-sage); border-radius: var(--radius-pill); background: #fff; color: var(--brand-sage-dark); font: inherit; font-weight: 700; cursor: pointer; }
+.admin-tab.is-active { background: var(--brand-sage); color: #fff; }
+.admin-list { display: grid; gap: 1.25rem; }
+.admin-booking { padding: 1.5rem; background: #fff; border-radius: var(--radius-lg); box-shadow: var(--shadow-card); }
+.admin-booking header { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; justify-content: space-between; }
+.admin-booking h2 { margin: 0; font-size: 1.3rem; }
+.admin-booking ul { padding-left: 1.2rem; }
+.admin-notes { white-space: pre-wrap; padding: 0.75rem 1rem; background: var(--brand-cream); border-radius: var(--radius-sm); }
+.admin-pill { padding: 0.25rem 0.75rem; border-radius: var(--radius-pill); font-size: 0.8rem; font-weight: 800; background: var(--brand-blush); }
+.admin-pill--approved { background: var(--brand-gold-light); }
+.admin-pill--deposit_paid { background: var(--brand-sage); color: #fff; }
+.admin-pill--declined { background: var(--brand-beige); }
+.admin-actions { display: grid; gap: 0.75rem; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--brand-beige); }
+.admin-actions .form-field { margin-bottom: 0; }
+.admin-actions input, .admin-actions textarea { max-width: 100%; }
+.form-error { color: #A3423A; font-weight: 700; }

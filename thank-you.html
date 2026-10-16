@@ -37,7 +37,8 @@
     <div class="shell intro center reveal">
       <span class="eyebrow">Thank you</span>
       <h1>Your enquiry is on its way to us</h1>
-      <p>Thank you for reaching out to Lilahleo. We'll be in touch personally to confirm availability and pricing for your event.</p>
+      <p data-thanks-default>Thank you for reaching out to Lilahleo. We'll be in touch personally to confirm availability and pricing for your event.</p>
+      <p data-thanks-booking hidden>Thank you for your booking enquiry<span data-thanks-ref></span>. We've emailed you a copy. Once we've confirmed availability for your date, you'll receive a secure link to pay your deposit.</p>
       <a class="btn btn--primary" href="index.html">Back to home</a>
     </div>
   </section>
@@ -53,5 +54,15 @@
 </footer>
 
 <script src="script.js"></script>
+<script>
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    if (params.get('type') !== 'booking') { return; }
+    document.querySelector('[data-thanks-default]').hidden = true;
+    document.querySelector('[data-thanks-booking]').hidden = false;
+    var ref = params.get('ref') || '';
+    if (/^LL-[0-9A-F-]+$/.test(ref)) { document.querySelector('[data-thanks-ref]').textContent = ' (' + ref + ')'; }
+  })();
+</script>
 </body>
 </html>
